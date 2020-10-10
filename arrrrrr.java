@@ -1,4 +1,4 @@
-package com.Pirple;
+
 
 import java.util.Arrays;
 
@@ -23,7 +23,7 @@ public class arrrrrr {
 
                     arr4[i][x][y] = TWE++;
 
-                    System.out.println("Main box number: " + (i+1) + " | with box number:  " + (x+1) + " With Var number:" + (TWE) + " ");
+                    System.out.println("Main box number: " + (i + 1) + " | with box number:  " + (x + 1) + " With Var number:" + (TWE) + " ");
 
                 }
 
@@ -42,7 +42,52 @@ public class arrrrrr {
         System.out.println();
         System.out.println("**********");
 
+
         //4D IN A DIFFERENT WAYS
+
+          /*
+        The purpose of using arrays is to Store a huge amount of Data. For example let's imagine that we wanna
+         store 18M students names to the memory. We can't do that in a regular way of storing variables (We
+         can but it can take months to write it down) : so we need to use arrays & for loop.
+        This loop is the means of storing 18M vars using just 8 lines of code.
+        */
+
+        int MillionStudent[][][][] = new int[3][3][2][1000000]; //18Million VARS
+
+
+        int V = 0;
+        for (int i = 0; i < MillionStudent.length; i++) {
+
+            for (int x = 0; x < MillionStudent[i].length; x++) {
+
+
+                for (int y = 0; y < MillionStudent[i][x].length; y++)
+
+                    for (int y1 = 0; y1 < MillionStudent[i][x][y].length; y1++) {
+
+                        MillionStudent[i][x][y][y1] = V++;
+
+                        System.out.println("Main SCHOOL number: " + (i + 1) + " | with CLASS number:  " + (x + 1) + " | In room number: " + (y + 1) + " With Student number:" + (V) + " ");
+
+                    }
+
+                System.out.println();
+
+            }
+
+
+
+
+        }
+
+        System.out.println("**********");
+        System.out.println();
+        System.out.println();
+        System.out.println(Arrays.deepToString(MillionStudent));
+        System.out.println();
+        System.out.println();
+        System.out.println("**********");
+
 
         int arrays4D1[][][][] = new int[][][][]{
 
@@ -79,6 +124,7 @@ public class arrrrrr {
 
 
         };
+
         //How to run the 4D arrays in a for Loop
 
         int a = 0;
@@ -93,7 +139,7 @@ public class arrrrrr {
 
                         arrays4D1[i][x][y][y1] = a++;
 
-                        System.out.println("Main box number: " + (i+1) + " | with box number:  " + (x+1) + " | with box number: " + (y+1) + " With Var number:" + (a) + " ");
+                        System.out.println("Main box number: " + (i + 1) + " | with box number:  " + (x + 1) + " | with box number: " + (y + 1) + " With Var number:" + (a) + " ");
 
                     }
 
@@ -114,48 +160,5 @@ public class arrrrrr {
         System.out.println("**********");
 
 
-       /*
-        The purpose of using arrays is to Store a huge amount of Data. For example let's imagine that we wanna
-         store 18M students names to the memory. We can't do that in a regular way of storing variables (We
-         can but it can take months to write it down) : so we need to use arrays & for loop.
-        This loop is the means of storing 18M vars using just 8 lines of code.
-        */
 
-        int MillionStudent[][][][] = new int[3][3][2][1000000]; //18Million VARS
-
-
-        int V = 0;
-        for (int i = 0; i < MillionStudent.length; i++) {
-
-            for (int x = 0; x < MillionStudent[i].length; x++) {
-
-
-                for (int y = 0; y < MillionStudent[i][x].length; y++)
-
-                    for (int y1 = 0; y1 < MillionStudent[i][x][y].length; y1++) {
-
-                        MillionStudent[i][x][y][y1] = V++;
-
-                        System.out.println("Main SCHOOL number: " + (i+1) + " | with CLASS number:  " + (x+1) + " | In room number: " + (y+1) + " With Student number:" + (V) + " ");
-
-                    }
-
-                System.out.println();
-
-            }
-
-
-        }
-
-        System.out.println("**********");
-        System.out.println();
-        System.out.println();
-        System.out.println(Arrays.deepToString(MillionStudent));
-        System.out.println();
-        System.out.println();
-        System.out.println("**********");
-
-
-    }
-
-}
+    }}
